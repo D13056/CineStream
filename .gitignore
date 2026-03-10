@@ -1,0 +1,20 @@
+# CineStream - Source code is private
+*.java
+*.kt
+*.gradle
+*.xml
+!docs/**/*.xml
+build/
+.gradle/
+.idea/
+*.iml
+app/
+src/
+local.properties
+gradle/
+gradlew
+gradlew.bat
+*.keystore
+*.jks
+*.env
+node_modules/
