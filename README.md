@@ -12,7 +12,7 @@
 
 ---
 
-<img src="docs/banner.png" alt="CineStream Banner" width="100%">
+<img src="docs/screenshots/04-home.jpg" alt="CineStream Home Screen Banner" width="100%">
 
 **Stream unlimited movies, TV shows & series — completely FREE with ZERO ADS.**
 No pop-ups. No banners. No interruptions. Just pure entertainment.
@@ -107,34 +107,34 @@ Open the APK file and tap **Install**. Launch CineStream and start streaming!
 <div align="center">
 <table>
 <tr>
-<td><img src="docs/screenshots/01-home.jpg" width="200" alt="Home Screen"></td>
-<td><img src="docs/screenshots/02-browse.jpg" width="200" alt="Browse Content"></td>
-<td><img src="docs/screenshots/03-categories.jpg" width="200" alt="Categories"></td>
+<td><img src="docs/screenshots/01-player.jpg" width="280" alt="CineStream Video Player"></td>
+<td><img src="docs/screenshots/02-player-subtitles.jpg" width="280" alt="CineStream Subtitle Settings"></td>
+<td><img src="docs/screenshots/03-player-speed.jpg" width="280" alt="CineStream Playback Speed"></td>
+</tr>
+<tr>
+<td align="center"><b>▶️ Video Player</b></td>
+<td align="center"><b>🔤 Subtitle Settings</b></td>
+<td align="center"><b>⚡ Playback Speed</b></td>
+</tr>
+<tr>
+<td><img src="docs/screenshots/04-home.jpg" width="200" alt="CineStream Home Screen"></td>
+<td><img src="docs/screenshots/06-favorites.jpg" width="200" alt="CineStream Favorites"></td>
+<td><img src="docs/screenshots/07-downloads.jpg" width="200" alt="CineStream Downloads"></td>
 </tr>
 <tr>
 <td align="center"><b>🏠 Home Screen</b></td>
-<td align="center"><b>📂 Browse</b></td>
-<td align="center"><b>🎭 Categories</b></td>
+<td align="center"><b>❤️ Favorites</b></td>
+<td align="center"><b>📥 Downloads</b></td>
 </tr>
 <tr>
-<td><img src="docs/screenshots/04-details.jpg" width="200" alt="Movie Details"></td>
-<td><img src="docs/screenshots/05-episodes.jpg" width="200" alt="Episodes List"></td>
-<td><img src="docs/screenshots/06-player.jpg" width="200" alt="Video Player"></td>
-</tr>
-<tr>
-<td align="center"><b>🎬 Movie Details</b></td>
-<td align="center"><b>📺 Episodes</b></td>
-<td align="center"><b>▶️ Player</b></td>
-</tr>
-<tr>
-<td><img src="docs/screenshots/07-search.jpg" width="200" alt="Search"></td>
-<td><img src="docs/screenshots/08-downloads.jpg" width="200" alt="Downloads"></td>
-<td><img src="docs/screenshots/09-settings.jpg" width="200" alt="Settings"></td>
+<td><img src="docs/screenshots/08-search.jpg" width="200" alt="CineStream Search"></td>
+<td><img src="docs/screenshots/09-settings.jpg" width="200" alt="CineStream Settings"></td>
+<td><img src="docs/screenshots/05-home-full.jpg" width="200" alt="CineStream Home Full View"></td>
 </tr>
 <tr>
 <td align="center"><b>🔍 Search</b></td>
-<td align="center"><b>📥 Downloads</b></td>
 <td align="center"><b>⚙️ Settings</b></td>
+<td align="center"><b>📱 Home (Full View)</b></td>
 </tr>
 </table>
 </div>
