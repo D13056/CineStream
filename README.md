@@ -68,8 +68,8 @@ No pop-ups. No banners. No interruptions. Just pure entertainment.
 ### 📥 Download & Offline Viewing
 - Download movies and episodes for offline viewing
 - Multiple quality options (360p to 1080p)
-- **VidSrc Direct Downloads** — fast, reliable download links
-- **Multiple download servers** — GoFile, FastCloud, and more
+- **Direct Downloads** — fast, reliable download links
+- **Multiple download servers** — redundant servers for reliability
 
 ### 🎬 Advanced Player
 - **Built-in HLS Player** with Netflix skin
@@ -159,10 +159,16 @@ English, Hindi, Spanish, French, German, Italian, Portuguese, Japanese, Korean, 
 
 ## 🔄 Changelog
 
-### v2.0 (Latest) — March 2026
+### v2.1 (Latest) — March 2026
+- ✅ Anonymized all server/source names for privacy
+- ✅ 15+ streaming servers with generic labels
+- ✅ Improved download quality badge display
+- ✅ Build and stability improvements
+
+### v2.0 — March 2026
 - ✅ Netflix-style UI with dark theme
 - ✅ Multi-source stream extraction (8 sources)
-- ✅ VidSrc direct download integration
+- ✅ Direct download integration
 - ✅ Picture-in-Picture mode
 - ✅ Advanced subtitle support (50+ languages)
 - ✅ Continue Watching feature
