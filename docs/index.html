@@ -411,64 +411,83 @@
             text-align: center;
             overflow: hidden;
         }
+        /* Row label */
+        .screenshots-row-label {
+            color: rgba(255,255,255,0.5);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0 0 12px;
+        }
+        /* Shared scroll row */
         .screenshots-scroll {
             display: flex;
             gap: 24px;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
-            padding: 20px 40px 40px;
+            padding: 10px 40px 20px;
             scrollbar-width: none;
+            justify-content: center;
         }
         .screenshots-scroll::-webkit-scrollbar { display: none; }
+        /* Common item styles */
         .screenshot-item {
             flex: 0 0 auto;
             scroll-snap-align: center;
             position: relative;
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
         .screenshot-item:hover {
-            transform: scale(1.05) translateY(-8px);
+            transform: scale(1.03) translateY(-6px);
             box-shadow: 0 30px 80px rgba(229,9,20,0.2), 0 0 0 1px rgba(229,9,20,0.2);
         }
         .screenshot-item img {
-            width: 240px;
-            height: auto;
             display: block;
-            border-radius: 20px;
+            height: auto;
+            border-radius: 16px;
+        }
+        /* Player row — landscape screenshots */
+        .screenshots-row-player {
+            margin-bottom: 30px;
+        }
+        .screenshots-row-player .screenshot-item img {
+            width: 380px;
+            height: auto;
+        }
+        /* App row — portrait screenshots */
+        .screenshots-row-app .screenshot-item img {
+            width: 200px;
+            height: auto;
         }
         .screenshot-label {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 40px 16px 16px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 30px 12px 12px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
             color: white;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
             text-align: center;
         }
         .screenshots-dots {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 10px;
+            display: none;
         }
-        .screenshots-dots span {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.2);
-            transition: background 0.3s;
+        @media (max-width: 1200px) {
+            .screenshots-row-player .screenshot-item img { width: 320px; }
+            .screenshots-row-app .screenshot-item img { width: 180px; }
         }
-        .screenshots-dots span.active { background: var(--accent); width: 24px; border-radius: 4px; }
         @media (max-width: 768px) {
-            .screenshot-item img { width: 200px; }
-            .screenshots-scroll { gap: 16px; padding: 20px 20px 30px; }
+            .screenshots-row-player .screenshot-item img { width: 280px; }
+            .screenshots-row-app .screenshot-item img { width: 160px; }
+            .screenshots-scroll { gap: 16px; padding: 10px 20px 20px; justify-content: flex-start; }
         }
 
         /* ═══ Zero Ads Section ═══ */
@@ -799,7 +818,9 @@
             <h2 class="section-title">See CineStream in Action</h2>
             <p class="section-subtitle">Real screenshots from the app — beautiful Netflix-style interface with zero ads</p>
         </div>
-        <div class="screenshots-scroll">
+        <!-- Player Screenshots Row (Landscape) -->
+        <p class="screenshots-row-label">🎬 Player Experience</p>
+        <div class="screenshots-scroll screenshots-row-player">
             <div class="screenshot-item animate-on-scroll">
                 <img src="screenshots/01-player.jpg" alt="CineStream Video Player - HD Movie Streaming with Controls" loading="lazy">
                 <div class="screenshot-label">▶️ Video Player</div>
@@ -812,6 +833,11 @@
                 <img src="screenshots/03-player-speed.jpg" alt="CineStream Playback Speed Control" loading="lazy">
                 <div class="screenshot-label">⚡ Playback Speed</div>
             </div>
+        </div>
+
+        <!-- App Screenshots Row (Portrait) -->
+        <p class="screenshots-row-label">📱 App Interface</p>
+        <div class="screenshots-scroll screenshots-row-app">
             <div class="screenshot-item animate-on-scroll">
                 <img src="screenshots/04-home.jpg" alt="CineStream Home Screen - Free Movie Streaming App" loading="lazy">
                 <div class="screenshot-label">🏠 Home Screen</div>
@@ -837,9 +863,7 @@
                 <div class="screenshot-label">⚙️ Settings</div>
             </div>
         </div>
-        <div class="screenshots-dots">
-            <span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
+        <div class="screenshots-dots"></div>
     </section>
 
     <!-- ═══ Zero Ads Section ═══ -->
