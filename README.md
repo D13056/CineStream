@@ -107,16 +107,34 @@ Open the APK file and tap **Install**. Launch CineStream and start streaming!
 <div align="center">
 <table>
 <tr>
-<td><img src="docs/screenshot-home.png" width="200" alt="Home Screen"></td>
-<td><img src="docs/screenshot-detail.png" width="200" alt="Movie Detail"></td>
-<td><img src="docs/screenshot-player.png" width="200" alt="Video Player"></td>
-<td><img src="docs/screenshot-download.png" width="200" alt="Downloads"></td>
+<td><img src="docs/screenshots/01-home.jpg" width="200" alt="Home Screen"></td>
+<td><img src="docs/screenshots/02-browse.jpg" width="200" alt="Browse Content"></td>
+<td><img src="docs/screenshots/03-categories.jpg" width="200" alt="Categories"></td>
 </tr>
 <tr>
-<td align="center">Home</td>
-<td align="center">Details</td>
-<td align="center">Player</td>
-<td align="center">Downloads</td>
+<td align="center"><b>🏠 Home Screen</b></td>
+<td align="center"><b>📂 Browse</b></td>
+<td align="center"><b>🎭 Categories</b></td>
+</tr>
+<tr>
+<td><img src="docs/screenshots/04-details.jpg" width="200" alt="Movie Details"></td>
+<td><img src="docs/screenshots/05-episodes.jpg" width="200" alt="Episodes List"></td>
+<td><img src="docs/screenshots/06-player.jpg" width="200" alt="Video Player"></td>
+</tr>
+<tr>
+<td align="center"><b>🎬 Movie Details</b></td>
+<td align="center"><b>📺 Episodes</b></td>
+<td align="center"><b>▶️ Player</b></td>
+</tr>
+<tr>
+<td><img src="docs/screenshots/07-search.jpg" width="200" alt="Search"></td>
+<td><img src="docs/screenshots/08-downloads.jpg" width="200" alt="Downloads"></td>
+<td><img src="docs/screenshots/09-settings.jpg" width="200" alt="Settings"></td>
+</tr>
+<tr>
+<td align="center"><b>🔍 Search</b></td>
+<td align="center"><b>📥 Downloads</b></td>
+<td align="center"><b>⚙️ Settings</b></td>
 </tr>
 </table>
 </div>

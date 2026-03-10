@@ -405,6 +405,72 @@
         .feature-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
         .feature-card p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
 
+        /* ═══ Screenshots Gallery ═══ */
+        #screenshots {
+            background: linear-gradient(135deg, #050a15 0%, #0a0a1a 50%, #0f0515 100%);
+            text-align: center;
+            overflow: hidden;
+        }
+        .screenshots-scroll {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding: 20px 40px 40px;
+            scrollbar-width: none;
+        }
+        .screenshots-scroll::-webkit-scrollbar { display: none; }
+        .screenshot-item {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .screenshot-item:hover {
+            transform: scale(1.05) translateY(-8px);
+            box-shadow: 0 30px 80px rgba(229,9,20,0.2), 0 0 0 1px rgba(229,9,20,0.2);
+        }
+        .screenshot-item img {
+            width: 240px;
+            height: auto;
+            display: block;
+            border-radius: 20px;
+        }
+        .screenshot-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 40px 16px 16px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+        }
+        .screenshots-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .screenshots-dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transition: background 0.3s;
+        }
+        .screenshots-dots span.active { background: var(--accent); width: 24px; border-radius: 4px; }
+        @media (max-width: 768px) {
+            .screenshot-item img { width: 200px; }
+            .screenshots-scroll { gap: 16px; padding: 20px 20px 30px; }
+        }
+
         /* ═══ Zero Ads Section ═══ */
         #zero-ads {
             background: linear-gradient(135deg, #1a0505 0%, #0a0a1a 50%, #050a1a 100%);
@@ -723,6 +789,56 @@
                 <h3>Picture-in-Picture</h3>
                 <p>Watch in a floating window while using other apps. Perfect for multitasking on your phone or tablet.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- ═══ Screenshots Gallery ═══ -->
+    <section id="screenshots">
+        <div class="section-header">
+            <div class="section-label"><i class="fas fa-mobile-alt"></i> APP PREVIEW</div>
+            <h2 class="section-title">See CineStream in Action</h2>
+            <p class="section-subtitle">Real screenshots from the app — beautiful Netflix-style interface with zero ads</p>
+        </div>
+        <div class="screenshots-scroll">
+            <div class="screenshot-item animate-on-scroll">
+                <img src="screenshots/01-home.jpg" alt="CineStream Home Screen - Free Movie Streaming" loading="lazy">
+                <div class="screenshot-label">🏠 Home Screen</div>
+            </div>
+            <div class="screenshot-item animate-on-scroll">
+                <img src="screenshots/02-browse.jpg" alt="CineStream Browse - Movies and TV Shows" loading="lazy">
+                <div class="screenshot-label">📂 Browse Content</div>
+            </div>
+            <div class="screenshot-item animate-on-scroll">
+                <img src="screenshots/03-categories.jpg" alt="CineStream Categories - Genres" loading="lazy">
+                <div class="screenshot-label">🎭 Categories</div>
+            </div>
+            <div class="screenshot-item animate-on-scroll">
+                <img src="screenshots/04-details.jpg" alt="CineStream Movie Details - Info Page" loading="lazy">
+                <div class="screenshot-label">🎬 Movie Details</div>
+            </div>
+            <div class="screenshot-item animate-on-scroll">
+                <img src="screenshots/05-episodes.jpg" alt="CineStream TV Show Episodes" loading="lazy">
+                <div class="screenshot-label">📺 Episodes</div>
+            </div>
+            <div class="screenshot-item animate-on-scroll">
+                <img src="screenshots/06-player.jpg" alt="CineStream Video Player - HD Streaming" loading="lazy">
+                <div class="screenshot-label">▶️ Video Player</div>
+            </div>
+            <div class="screenshot-item animate-on-scroll">
+                <img src="screenshots/07-search.jpg" alt="CineStream Search - Find Movies" loading="lazy">
+                <div class="screenshot-label">🔍 Search</div>
+            </div>
+            <div class="screenshot-item animate-on-scroll">
+                <img src="screenshots/08-downloads.jpg" alt="CineStream Downloads - Offline Viewing" loading="lazy">
+                <div class="screenshot-label">📥 Downloads</div>
+            </div>
+            <div class="screenshot-item animate-on-scroll">
+                <img src="screenshots/09-settings.jpg" alt="CineStream Settings - Preferences" loading="lazy">
+                <div class="screenshot-label">⚙️ Settings</div>
+            </div>
+        </div>
+        <div class="screenshots-dots">
+            <span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
     </section>
 
