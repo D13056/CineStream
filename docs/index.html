@@ -462,13 +462,32 @@
             height: 200px;
             width: auto;
         }
-        /* App row — portrait screenshots */
+        /* App row — portrait screenshots (same aspect ratio 1080x2316) */
+        .screenshots-row-app {
+            margin-bottom: 32px;
+        }
         .screenshots-row-app .screenshot-item {
             height: 420px;
         }
         .screenshots-row-app .screenshot-item img {
             height: 420px;
             width: auto;
+        }
+        /* Home full row — extra-tall screenshot (1080x3396), own row with fitted frame */
+        .screenshots-row-homefull {
+            justify-content: center;
+        }
+        .screenshots-row-homefull .screenshot-item {
+            height: 520px;
+            border: 2px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+            background: #0a0a1a;
+        }
+        .screenshots-row-homefull .screenshot-item img {
+            height: 520px;
+            width: auto;
+            border-radius: 16px;
+            object-fit: contain;
         }
         .screenshot-label {
             position: absolute;
@@ -490,12 +509,16 @@
             .screenshots-row-player .screenshot-item img { height: 170px; }
             .screenshots-row-app .screenshot-item,
             .screenshots-row-app .screenshot-item img { height: 360px; }
+            .screenshots-row-homefull .screenshot-item,
+            .screenshots-row-homefull .screenshot-item img { height: 440px; }
         }
         @media (max-width: 768px) {
             .screenshots-row-player .screenshot-item,
             .screenshots-row-player .screenshot-item img { height: 140px; }
             .screenshots-row-app .screenshot-item,
             .screenshots-row-app .screenshot-item img { height: 300px; }
+            .screenshots-row-homefull .screenshot-item,
+            .screenshots-row-homefull .screenshot-item img { height: 360px; }
             .screenshots-scroll { gap: 12px; padding: 10px 16px 20px; justify-content: flex-start; }
         }
 
@@ -844,16 +867,12 @@
             </div>
         </div>
 
-        <!-- App Screenshots Row (Portrait) -->
+        <!-- App Screenshots Row (Portrait — same size 1080x2316) -->
         <p class="screenshots-row-label">📱 App Interface</p>
         <div class="screenshots-scroll screenshots-row-app">
             <div class="screenshot-item animate-on-scroll">
                 <img src="screenshots/04-home.jpg" alt="CineStream Home Screen - Free Movie Streaming App" loading="lazy">
                 <div class="screenshot-label">🏠 Home Screen</div>
-            </div>
-            <div class="screenshot-item animate-on-scroll">
-                <img src="screenshots/05-home-full.jpg" alt="CineStream Home Full View - Continue Watching & Trending" loading="lazy">
-                <div class="screenshot-label">📱 Home (Full View)</div>
             </div>
             <div class="screenshot-item animate-on-scroll">
                 <img src="screenshots/06-favorites.jpg" alt="CineStream Favorites - Watchlist" loading="lazy">
@@ -872,7 +891,15 @@
                 <div class="screenshot-label">⚙️ Settings</div>
             </div>
         </div>
-        <div class="screenshots-dots"></div>
+
+        <!-- Home Full View Row (extra-tall screenshot — 1080x3396) -->
+        <p class="screenshots-row-label">📜 Full Home Scroll</p>
+        <div class="screenshots-scroll screenshots-row-homefull">
+            <div class="screenshot-item animate-on-scroll">
+                <img src="screenshots/05-home-full.jpg" alt="CineStream Home Full View - Continue Watching & Trending" loading="lazy">
+                <div class="screenshot-label">📱 Home (Full View)</div>
+            </div>
+        </div>
     </section>
 
     <!-- ═══ Zero Ads Section ═══ -->
