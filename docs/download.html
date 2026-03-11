@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download CineStream APK v2.0 — Free Movie Streaming App for Android</title>
-    <meta name="description" content="Download CineStream APK v2.0 for Android. Free movie and TV streaming app with zero ads. Stream 100,000+ movies in HD. Best HDO Box alternative. Only 8MB.">
+    <title>Download CineStream APK — Free Movie Streaming App for Android</title>
+    <meta name="description" content="Download CineStream APK latest version for Android. Free movie and TV streaming app with zero ads. Stream 100,000+ movies in HD. Best HDO Box alternative. Only 8MB.">
     <meta name="keywords" content="CineStream APK download, free movie app APK, streaming app download, HDO Box alternative APK, Cinema HD alternative, ad-free movie app download, CineStream latest version">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://d13056.github.io/CineStream/download.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://d13056.github.io/CineStream/download.html">
-    <meta property="og:title" content="Download CineStream APK v2.0 — Free Movie Streaming">
-    <meta property="og:description" content="Download CineStream APK v2.0 for Android. Zero ads, 100,000+ movies, HD streaming. Only 8MB.">
+    <meta property="og:title" content="Download CineStream APK — Free Movie Streaming">
+    <meta property="og:description" content="Download CineStream APK latest version for Android. Zero ads, 100,000+ movies, HD streaming. Only 8MB.">
     <meta property="og:image" content="https://d13056.github.io/CineStream/screenshots/04-home.jpg">
-    <script type="application/ld+json">
+    <script type="application/ld+json" id="app-schema">
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "CineStream",
         "operatingSystem": "Android 7.0+",
         "applicationCategory": "MultimediaApplication",
-        "softwareVersion": "2.0",
+        "softwareVersion": "latest",
         "fileSize": "8MB",
-        "downloadUrl": "https://github.com/D13056/CineStream/releases/download/v2.0/CineStream-v2.0-signed.apk",
+        "downloadUrl": "https://github.com/D13056/CineStream/releases/latest",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
     }
     </script>
@@ -50,18 +50,18 @@
 </head>
 <body>
     <div class="container">
-        <h1>⬇️ Download CineStream APK v2.0</h1>
+        <h1 id="dl-title">⬇️ Download CineStream APK</h1>
         <p>The ultimate free movie and TV streaming app for Android. Zero ads, zero trackers, zero cost. Stream over 100,000 movies and TV shows in HD quality.</p>
 
         <div class="info">
-            <div class="info-item"><div class="num">8 MB</div><div class="label">App Size</div></div>
-            <div class="info-item"><div class="num">v2.0</div><div class="label">Latest Version</div></div>
+            <div class="info-item"><div class="num" id="dl-size">...</div><div class="label">App Size</div></div>
+            <div class="info-item"><div class="num" id="dl-version">...</div><div class="label">Latest Version</div></div>
             <div class="info-item"><div class="num">0</div><div class="label">Ads</div></div>
             <div class="info-item"><div class="num">7.0+</div><div class="label">Android</div></div>
         </div>
 
-        <a href="https://github.com/D13056/CineStream/releases/download/v2.0/CineStream-v2.0-signed.apk" class="download-btn">📥 Download APK (8 MB)</a>
-        <a href="https://github.com/D13056/CineStream/releases/tag/v2.0" class="download-btn secondary-btn">📋 Release Notes</a>
+        <a id="dl-btn" href="https://github.com/D13056/CineStream/releases/latest" class="download-btn">📥 Download APK</a>
+        <a id="dl-notes" href="https://github.com/D13056/CineStream/releases/latest" class="download-btn secondary-btn">📋 Release Notes</a>
 
         <img src="screenshots/04-home.jpg" alt="CineStream Home Screen - Free Movie Streaming" loading="lazy">
         <img src="screenshots/01-player.jpg" alt="CineStream Video Player" loading="lazy" style="max-width:350px;">
@@ -87,5 +87,37 @@
 
         <p style="margin-top:40px;font-size:0.85em;color:#555;">CineStream does not host any content. All streams are provided by third-party services.</p>
     </div>
+
+    <script>
+    (async function() {
+        try {
+            const res = await fetch('https://api.github.com/repos/D13056/CineStream/releases/latest');
+            const data = await res.json();
+            const ver = data.tag_name;                     // e.g. "v2.1"
+            const apk = data.assets && data.assets[0];
+            const url = apk ? apk.browser_download_url : data.html_url;
+            const sizeMB = apk ? (apk.size / 1048576).toFixed(1) + ' MB' : '~8 MB';
+
+            document.getElementById('dl-title').textContent = '⬇️ Download CineStream APK ' + ver;
+            document.getElementById('dl-version').textContent = ver;
+            document.getElementById('dl-size').textContent = sizeMB;
+            document.getElementById('dl-btn').href = url;
+            document.getElementById('dl-btn').textContent = '📥 Download APK (' + sizeMB + ')';
+            document.getElementById('dl-notes').href = data.html_url;
+
+            // Update structured data
+            var schema = document.getElementById('app-schema');
+            if (schema) {
+                var sd = JSON.parse(schema.textContent);
+                sd.softwareVersion = ver;
+                sd.fileSize = sizeMB;
+                sd.downloadUrl = url;
+                schema.textContent = JSON.stringify(sd);
+            }
+
+            document.title = 'Download CineStream APK ' + ver + ' — Free Movie Streaming App for Android';
+        } catch(e) { /* fallback: links go to /releases/latest */ }
+    })();
+    </script>
 </body>
 </html>

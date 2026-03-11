@@ -76,7 +76,7 @@
             "https://d13056.github.io/CineStream/screenshots/01-player.jpg",
             "https://d13056.github.io/CineStream/screenshots/07-downloads.jpg"
         ],
-        "softwareVersion": "2.0",
+        "softwareVersion": "latest",
         "fileSize": "8MB",
         "datePublished": "2026-03-10",
         "dateModified": "2026-03-10",
@@ -880,8 +880,8 @@
     <section class="hero">
         <div class="particles" id="particles"></div>
         <div class="hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-circle"></i> NEW — Version 2.0 Released
+            <div class="hero-badge" id="hero-badge">
+                <i class="fas fa-circle"></i> NEW — Latest Version
             </div>
             <h1>Stream Movies & TV<br><span class="highlight">100% Free. Zero Ads.</span></h1>
             <p class="hero-subtitle">
@@ -1303,5 +1303,17 @@
             <li>Android 7.0 Nougat and above supported</li>
         </ul>
     </div>
+
+    <script>
+    (async function() {
+        try {
+            const res = await fetch('https://api.github.com/repos/D13056/CineStream/releases/latest');
+            const data = await res.json();
+            const ver = data.tag_name;
+            const badge = document.getElementById('hero-badge');
+            if (badge) badge.innerHTML = '<i class="fas fa-circle"></i> NEW \u2014 Version ' + ver + ' Released';
+        } catch(e) {}
+    })();
+    </script>
 </body>
 </html>

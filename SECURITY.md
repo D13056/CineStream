@@ -11,8 +11,8 @@ If you discover a security vulnerability in CineStream, please report it respons
 
 | Version | Supported |
 |---------|-----------|
-| 2.0.x   | ✅ Yes    |
-| 1.0.x   | ❌ No     |
+| 2.1.x   | ✅ Yes    |
+| < 2.1   | ❌ No     |
 
 ## APK Integrity
 

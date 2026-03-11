@@ -5,7 +5,7 @@
 ### The #1 Ad-Free Alternative to HDO Box, Cinema HD, BeeTV & More
 
 [![Download APK](https://img.shields.io/badge/⬇_Download-Latest_APK-E50914?style=for-the-badge&logo=android&logoColor=white)](https://github.com/D13056/CineStream/releases/latest)
-[![Version](https://img.shields.io/badge/Version-2.0-blue?style=for-the-badge)](https://github.com/D13056/CineStream/releases)
+[![Version](https://img.shields.io/github/v/release/D13056/CineStream?style=for-the-badge&label=Version&color=blue)](https://github.com/D13056/CineStream/releases/latest)
 [![Platform](https://img.shields.io/badge/Platform-Android_7.0+-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/D13056/CineStream/releases)
 [![License](https://img.shields.io/badge/License-Free-green?style=for-the-badge)](LICENSE)
 [![Zero Ads](https://img.shields.io/badge/Ads-ZERO_ADS-gold?style=for-the-badge&logo=adblock&logoColor=white)](https://github.com/D13056/CineStream)
@@ -164,23 +164,6 @@ English, Hindi, Spanish, French, German, Italian, Portuguese, Japanese, Korean, 
 - ✅ 15+ streaming servers with generic labels
 - ✅ Improved download quality badge display
 - ✅ Build and stability improvements
-
-### v2.0 — March 2026
-- ✅ Netflix-style UI with dark theme
-- ✅ Multi-source stream extraction (8 sources)
-- ✅ Direct download integration
-- ✅ Picture-in-Picture mode
-- ✅ Advanced subtitle support (50+ languages)
-- ✅ Continue Watching feature
-- ✅ Download tab with search
-- ✅ Premium system with 3-day free trial
-- ✅ Device management (up to 3 devices)
-- ✅ Performance optimizations
-
-### v1.0 — February 2026
-- 🎉 Initial release
-- Basic streaming with TMDB integration
-- Search and browse functionality
 
 ---
 
